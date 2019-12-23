@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go_module/sort"
+	"go_module/chapter_11/sort"
 )
 
 /**

@@ -32,9 +32,11 @@ type IntArray []int
 func (p IntArray) Len() int {
 	return len(p)
 }
+
 func (p IntArray) Less(i, j int) bool {
 	return p[i] < p[j]
 }
+
 func (p IntArray) Swap(i, j int) {
 	p[i], p[j] = p[j], p[i]
 }
@@ -44,9 +46,11 @@ type StringArray []string
 func (p StringArray) Len() int {
 	return len(p)
 }
+
 func (p StringArray) Less(i, j int) bool {
 	return p[i] < p[j]
 }
+
 func (p StringArray) Swap(i, j int) {
 	p[i], p[j] = p[j], p[i]
 }
@@ -55,6 +59,7 @@ func (p StringArray) Swap(i, j int) {
 func SortInts(a []int) {
 	Sort(IntArray(a))
 }
+
 func SortStrings(a []string) {
 	Sort(StringArray(a))
 }
@@ -62,6 +67,7 @@ func SortStrings(a []string) {
 func IntsAreSorted(a []int) bool {
 	return IsSorted(IntArray(a))
 }
+
 func StringsAreSorted(a []string) bool {
 	return IsSorted(StringArray(a))
 }
