@@ -13,6 +13,12 @@ type Customer struct {
 	Log
 }
 
+/**
+ * 内嵌实现继承
+ * @Author Liumm
+ * @Date   2019-12-23
+ * @return {[type]}   [description]
+ */
 func main() {
 	c := &Customer{"Barak Obama", Log{"1 - Yes we can!"}}
 	c.Add("2 - After me the world will be a better place!")
