@@ -6,6 +6,13 @@ import (
 	"os"
 )
 
+/**
+切片提供了 Go 中处理 I/O 缓冲的标准方式，下面 cat 函数的第二版中，在一个切片缓冲内使用无限 for 循环（直到文件尾部 EOF）读取文件，并写入到标准输出（os.Stdout）
+* @Author Liumm
+* @Date   2019-12-24
+* @param  {[type]}   f *os.File      [description]
+* @return {[type]}     [description]
+*/
 func cat(f *os.File) {
 	const NBUF = 512
 	var buf [NBUF]byte

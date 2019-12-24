@@ -19,6 +19,14 @@ func cat(r *bufio.Reader) {
 	return
 }
 
+/**
+ 使用了缓冲读取文件和命令行 flag 解析这两项技术。如果不加参数，那么你输入什么屏幕就打印什么。
+
+参数被认为是文件名，如果文件存在的话就打印文件内容到屏幕。命令行执行 cat test 测试输出。
+ * @Author Liumm
+ * @Date   2019-12-24
+ * @return {[type]}   [description]
+*/
 func main() {
 	flag.Parse()
 	if flag.NArg() == 0 {
