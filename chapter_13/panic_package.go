@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"go_module/parse" //"goModule/test"  // 模块名 + 路径,go module模式引入自定义包方式
+	"go_module/chapter_13/parse" //"goModule/test"  // 模块名 + 路径,go module模式引入自定义包方式
 )
 
 func main() {

@@ -16,6 +16,8 @@ func test() {
 		}
 	}()
 	badCall()
+	// panic -- recover去了
+	// 不执行这里
 	fmt.Printf("After bad call\r\n") // <-- wordt niet bereikt
 }
 
