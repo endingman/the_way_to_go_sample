@@ -23,9 +23,11 @@ func main() {
 }
 
 /**
-函数将变量作为参数：Function1(recv)
+函数将变量作为参数：Function1(recv) => 需要申明一个在外部定义的函数，你只需要给出函数名与函数签名，不需要给出函数体：
+func flushICache(begin, end uintptr) // implemented externally
 
-方法在变量上被调用：recv.Method1()
+
+方法在变量上被调用：recv.Method1()=>  func (recv receiver_type) methodName(parameter_list) (return_value_list) { ... },如果方法不需要使用 recv 的值，可以用 _ 替换它，比如：func (_ receiver_type) methodName(parameter_list) (return_value_list) { ... }
 
 在接收者是指针时，方法可以改变接收者的值（或状态），这点函数也可以做到（当参数作为指针传递，即通过引用调用时，函数也可以改变参数的状态）。
 
