@@ -1,10 +1,12 @@
 package main
 
-import "fmt"
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	c := make(chan int)
+	// c := make(chan int)
 
 	/**
 	   一个无缓冲通道只能包含 1 个元素，有时显得很局限。我们给通道提供了一个缓存，可以在扩展的 make 命令中设置它的容量，如下：
@@ -21,7 +23,7 @@ func main() {
 
 	  同步：ch :=make(chan type, value)
 	*/
-	// c := make(chan int, 50)
+	c := make(chan int, 50)
 
 	go func() {
 		time.Sleep(15 * 1e9)
@@ -43,7 +45,7 @@ sent 10
 */
 
 /**
- 协程通过在通道 ch 中放置一个值来处理结束的信号。main 协程等待 <-ch 直到从中获取到值。
+协程通过在通道 ch 中放置一个值来处理结束的信号。main 协程等待 <-ch 直到从中获取到值。
 
 我们期望从这个通道中获取返回的结果，像这样：
 
@@ -57,4 +59,28 @@ func main(){
     doSomethingElseForAWhile()
     result := <- ch
 }
+这个信号也可以是其他的，不返回结果，比如下面这个协程中的匿名函数（lambda）协程：
+
+ch := make(chan int)
+go func(){
+    // doSomething
+    ch <- 1 // Send a signal; value does not matter
+}()
+doSomethingElseForAWhile()
+<- ch   // Wait for goroutine to finish; discard sent value.
+
+
+或者等待两个协程完成，每一个都会对切片 s 的一部分进行排序，片段如下：
+
+done := make(chan bool)
+// doSort is a lambda function, so a closure which knows the channel done:
+doSort := func(s []int){
+    sort(s)
+    done <- true
+}
+i := pivot(s)
+go doSort(s[:i])
+go doSort(s[i:])
+<-done
+<-done
 */
