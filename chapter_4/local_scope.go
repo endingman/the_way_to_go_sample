@@ -18,3 +18,5 @@ func m() {
 	a := "O"
 	print(a)
 }
+
+// result -> GOG

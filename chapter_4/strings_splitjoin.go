@@ -16,7 +16,7 @@ func main() {
 	fmt.Println()
 
 	str2 := "GO1|The ABC of Go|25"
-	// strings.Split(s, sep) slice 用于自定义分割符号来对指定字符串进行分割，同样返回 slice：(类似于php字符串转字数组)
+	// strings.Split(s, sep) slice 用于自定义分割符号来对指定字符串进行分割，同样返回 slice：(类似于php字符串转数组)
 	sl2 := strings.Split(str2, "|")
 
 	fmt.Printf("Splitted in slice: %v\n", sl2)
