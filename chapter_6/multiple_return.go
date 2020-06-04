@@ -23,23 +23,23 @@ return 或 return var 都是可以的。
 任何一个非命名返回值（使用非命名返回值是很糟的编程习惯）在 return 语句里面都要明确指出包含返回值的变量或是一个可计算的值（就像上面警告所指出的那样）。
 */
 func main() {
-    numx2, numx3 = getX2AndX3(num)
-    PrintValues()
-    numx2, numx3 = getX2AndX3_2(num)
-    PrintValues()
+	numx2, numx3 = getX2AndX3(num)
+	PrintValues()
+	numx2, numx3 = getX2AndX3_2(num)
+	PrintValues()
 }
 
 func PrintValues() {
-    fmt.Printf("num = %d, 2x num = %d, 3x num = %d\n", num, numx2, numx3)
+	fmt.Printf("num = %d, 2x num = %d, 3x num = %d\n", num, numx2, numx3)
 }
 
-func getX2AndX3(input int) (int, int) { //非命名返回值，没有声明变量放回名
-    return 2 * input, 3 * input
+func getX2AndX3(input int) (int, int) { //非命名返回值，没有声明变量名返回
+	return 2 * input, 3 * input
 }
 
 func getX2AndX3_2(input int) (x2 int, x3 int) { //命名返回值,声明了返回变量名
-    x2 = 2 * input
-    x3 = 3 * input
-    // return x2, x3
-    return
+	x2 = 2 * input
+	x3 = 3 * input
+	// return x2, x3
+	return
 }
