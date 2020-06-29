@@ -13,7 +13,7 @@ func main() {
 	(*y).thingOne = "hello"
 	(*y).thingTwo = 1
 
-	// NOT OK
+	// NOT OK 、make的只有slice、map、chan这三个，这三个是指针类型，其他都是new
 	z := make(Bar) // 编译错误：cannot make type Bar
 	(*z).thingOne = "hello"
 	(*z).thingTwo = 1

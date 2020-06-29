@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// 使用自定义包中的结构体
 	struct1 := new(structPack.ExpStruct)
 	struct1.Mi1 = 10
 	struct1.Mf1 = 16

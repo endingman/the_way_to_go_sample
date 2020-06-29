@@ -28,7 +28,6 @@ type struct1 struct {
 func main() {
 	/**
 	  使用 new 函数给一个新的结构体变量分配内存，它返回指向已分配内存的指针：var t *T = new(T)，如果需要可以把这条语句放在不同的行（比如定义是包范围的，但是分配却没有必要在开始就做）
-	  * @type {[type]}
 	*/
 	ms := new(struct1)
 	// 像在面向对象语言所作的那样，可以使用点号符给字段赋值：structname.fieldname = value
@@ -37,6 +36,17 @@ func main() {
 	ms.str = "Chris"
 
 	// 使用点号符可以获取结构体字段的值：structname.fieldname
+	/**
+	  可以使用点号符给字段赋值：structname.fieldname = value。
+	  同样的，使用点号符可以获取结构体字段的值：structname.fieldname。
+	  在 Go 语言中这叫 选择器（selector）。无论变量是一个结构体类型还是一个结构体类型指针，都使用同样的 选择器符（selector-notation） 来引用结构体的字段：
+
+	  type myStruct struct { i int }
+	  var v myStruct    // v是结构体类型变量
+	  var p *myStruct   // p是指向一个结构体类型变量的指针
+	  v.i
+	  p.i
+	*/
 	fmt.Printf("The int is: %d\n", ms.i1)
 	fmt.Printf("The float is: %f\n", ms.f1)
 	fmt.Printf("The string is: %s\n", ms.str)

@@ -39,7 +39,7 @@ func main() {
 	fmt.Printf("The name of the person is %s %s\n", pers2.firstName, pers2.lastName)
 
 	// 3—struct as a literal:
-	pers3 := &Person{"Chris", "Woodward"} // pers3是指向一个结构体类型变量的指针
+	pers3 := &Person{"Chris", "Woodward"} // pers3是指向一个结构体类型变量的指针 *Person
 	upPerson(pers3)
 	fmt.Printf("The name of the person is %s %s\n", pers3.firstName, pers3.lastName)
 }
