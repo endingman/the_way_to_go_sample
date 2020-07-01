@@ -10,6 +10,7 @@ func main() {
 	v := reflect.ValueOf(x)
 	// setting a value:
 	// v.SetFloat(3.1415) // Error: will panic: reflect.Value.SetFloat using unaddressable value
+	// 可以使用 CanSet() 方法测试是否可设置
 	fmt.Println("settability of v:", v.CanSet())
 	v = reflect.ValueOf(&x) // Note: take the address of x.
 	fmt.Println("type of v:", v.Type())

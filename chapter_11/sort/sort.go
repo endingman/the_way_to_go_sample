@@ -6,6 +6,12 @@ type Sorter interface {
 	Swap(i, j int)
 }
 
+/**
+ * Sort 函数接收一个接口类型参数：Sorter,实现了上面接口的方法
+ * @Author Liumm
+ * @Date   2020-06-29
+ * @param  {[type]}   data Sorter [description]
+ */
 func Sort(data Sorter) {
 	for pass := 1; pass < data.Len(); pass++ {
 		for i := 0; i < data.Len()-pass; i++ {
@@ -16,6 +22,12 @@ func Sort(data Sorter) {
 	}
 }
 
+/**
+ * Sort 函数接收一个接口类型参数：Sorter,实现了上面接口的方法
+ * @Author Liumm
+ * @Date   2020-06-29
+ * @param  {[type]}   data Sorter [description]
+ */
 func IsSorted(data Sorter) bool {
 	n := data.Len()
 	for i := n - 1; i > 0; i-- {
@@ -57,17 +69,17 @@ func (p StringArray) Swap(i, j int) {
 
 // Convenience wrappers for common cases
 func SortInts(a []int) {
-	Sort(IntArray(a))
+	Sort(IntArray(a)) //conversion to current type
 }
 
 func SortStrings(a []string) {
-	Sort(StringArray(a))
+	Sort(StringArray(a)) //conversion to current type
 }
 
 func IntsAreSorted(a []int) bool {
-	return IsSorted(IntArray(a))
+	return IsSorted(IntArray(a)) //conversion to current type
 }
 
 func StringsAreSorted(a []string) bool {
-	return IsSorted(StringArray(a))
+	return IsSorted(StringArray(a)) //conversion to current type
 }

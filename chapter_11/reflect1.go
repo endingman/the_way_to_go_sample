@@ -16,11 +16,11 @@ import (
 */
 func main() {
 	var x float64 = 3.4
-	fmt.Println("type:", reflect.TypeOf(x))
-	v := reflect.ValueOf(x)
+	fmt.Println("type:", reflect.TypeOf(x)) //reflect.TypeOf返回被检查对象的类型
+	v := reflect.ValueOf(x)                 //reflect.ValueOf返回被检查对象的值
 	fmt.Println("value:", v)
 	fmt.Println("type:", v.Type())
-	fmt.Println("kind:", v.Kind())
+	fmt.Println("kind:", v.Kind()) //Kind 总是返回底层类型
 	fmt.Println("value:", v.Float())
 	fmt.Println(v.Interface())
 	fmt.Printf("value is %5.2e\n", v.Interface())

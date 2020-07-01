@@ -14,6 +14,8 @@ func (n NotknownType) String() string {
 }
 
 // variable to investigate:
+// 有些时候需要反射一个结构体类型。NumField() 方法返回结构体内的字段数量；
+// 通过一个 for 循环用索引取得每个字段的值 Field(i)
 var secret interface{} = NotknownType{"Ada", "Go", "Oberon"}
 
 func main() {

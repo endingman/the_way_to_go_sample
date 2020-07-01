@@ -12,6 +12,7 @@ type Person struct {
 
 // 空接口
 // 可以给一个空接口类型的变量 var val interface {} 赋任何类型的值
+// interface {} 变量在内存中占据两个字长：一个用来存储它包含的类型，另一个用来存储它包含的数据或者指向数据的指针
 type Any interface{}
 
 func main() {

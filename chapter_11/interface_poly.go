@@ -33,8 +33,8 @@ func main() {
 	fmt.Println("Looping through shapes for area is:", shapes)
 	for n := range shapes {
 		fmt.Println("Shape details: ", shapes[n])
-		//shapes[0]==>{5,3}调用的是Rectangle结构体的方法Area，
-		//shapes[1]===>&{5},调用的是Square的接口方法Area
+		//shapes[0]==>{5,3}调用的是Rectangle的接口方法 Area
+		//shapes[1]===>&{5},调用的是Square的接口方法 Area
 		//这是 多态 的 Go版本
 		//多态是面向对象编程中一个广为人知的概念：根据当前的类型选择正确的方法
 		//或者说：同一种类型在不同的实例上似乎表现出不同的行为

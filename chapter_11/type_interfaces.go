@@ -33,10 +33,10 @@ func main() {
 	  如果转换合法，v 是 varI 转换到类型 T 的值，ok 会是 true；否则 v 是类型 T 的零值，ok 是 false，也没有运行时错误发生。
 	* @type {[type]}
 	*/
-	if t, ok := areaIntf.(*Square); ok {
+	if t, ok := areaIntf.(*Square); ok { //areaIntf=>sq1=>Square,所以ok
 		fmt.Printf("The type of areaIntf is: %T\n", t)
 	}
-	if u, ok := areaIntf.(*Circle); ok {
+	if u, ok := areaIntf.(*Circle); ok { //areaIntf=>sq1=>Square,所以not ok
 		fmt.Printf("The type of areaIntf is: %T\n", u)
 	} else {
 		fmt.Println("areaIntf does not contain a variable of type Circle")
