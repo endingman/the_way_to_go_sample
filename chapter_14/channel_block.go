@@ -22,6 +22,7 @@ func main() {
 	fmt.Println(<-ch1) // prints only 0
 }
 
+// pump() 函数为通道提供数值，也被叫做生产者
 func pump(ch chan int) {
 	for i := 0; ; i++ {
 		ch <- i
