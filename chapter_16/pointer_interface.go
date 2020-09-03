@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-type nexter interface {
+type nexter interface { // interface 接口类型已经是一个指针
 	next() byte
 }
 
