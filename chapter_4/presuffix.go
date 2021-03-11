@@ -6,11 +6,13 @@ import (
 )
 
 /**
+
 HasPrefix 判断字符串 s 是否以 prefix 开头：
 strings.HasPrefix(s, prefix string) bool
 
 HasSuffix 判断字符串 s 是否以 suffix 结尾：
 strings.HasSuffix(s, suffix string) bool
+
  * @Author Liumm
  * @Date   2019-12-17
  * @return {[type]}   [description]

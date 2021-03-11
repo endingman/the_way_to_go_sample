@@ -19,7 +19,7 @@ func main() {
 	            var (
 	                identifier1 type1,
 	                identifier2 type2... )
-	         example:
+	         Go 编译器的智商已经高到可以根据变量的值来自动推断其类型 example:
 	            var (
 	            a = 15
 	            b = false
@@ -38,6 +38,10 @@ func main() {
 	  多变量可以在同一行进行赋值，如：
 
 	  a, b, c = 5, 7, "abc"
+
+	int、float、bool 和 string 这些基本类型都属于值类型，使用这些类型的变量直接指向存在内存中的值
+	内存地址会根据机器的不同而有所不同，甚至相同的程序在不同的机器上执行后也会有不同的内存地址。
+	因为每台机器可能有不同的存储器布局，并且位置分配也可能不同。
 
 	**/
 	var goos string = runtime.GOOS

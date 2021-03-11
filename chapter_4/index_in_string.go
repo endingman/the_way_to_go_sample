@@ -13,6 +13,8 @@ func main() {
 
 	  LastIndex 返回字符串 str 在字符串 s 中最后出现位置的索引（str 的第一个字符的索引），-1 表示字符串 s 不包含字符串 str：
 	  strings.LastIndex(s, str string) int
+
+	 字符串开始位置是0
 	*/
 	fmt.Printf("The position of \"Marc\" is: ")
 	fmt.Printf("%d\n", strings.Index(str, "Marc"))

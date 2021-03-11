@@ -7,6 +7,8 @@ func main() {
 	var m int32
 	// compiler error: cannot use n (type int16) as type int32 in assignment
 	//m = n
+	//int16 不能够被隐式转换为 int32。
+	//通过显式转换来避免这个问题
 	m = int32(n)
 	/**
 	  格式化字符串里，%d 用于格式化整数（%x 和 %X 用于格式化 16 进制表示的数字）
